@@ -1,0 +1,130 @@
+/* ==========================================================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fbf8f3; /* Fundo off-white acolhedor */
+    font-family: 'Quicksand', sans-serif; /* Fonte que importamos no HTML */
+    color: #4a3e3d; /* Texto marrom escuro, mais suave que preto */
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o rodapé fique sempre embaixo se a página tiver pouco conteúdo */
+}
+
+/* ==========================================================================
+   2. LAYOUT E CONTAINERS (Boas Práticas de Estrutura)
+   ========================================================================== */
+
+/* Limita a largura máxima do site para ficar centralizado e bonito em telas grandes */
+.content-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px;
+    flex: 1; /* Faz essa parte ocupar o espaço útil, empurrando o footer para o fim */
+}
+
+/* Em vez de estilizar a tag 'div', criamos uma classe reutilizável para os blocos */
+.card {
+    background-color: #ffffff;
+    padding: 35px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(163, 145, 131, 0.12); /* Sombra suave terrosa */
+}
+
+/* ==========================================================================
+   3. COMPONENTES ESPECÍFICOS
+   ========================================================================== */
+
+/* Cabeçalho principal */
+.main-header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main-header h1 {
+    color: #556b2f; /* Verde-oliva acolhedor */
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilização da lista de pilares */
+.pilares-lista {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.pilares-lista li {
+    background-color: #fdfbf7;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 5px solid #e0a996; /* Detalhe em rosa-coral */
+    transition: transform 0.2s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito interativo sutil ao passar o mouse nos pilares */
+.pilares-lista li:hover {
+    transform: translateX(5px); /* Dá um leve "passinho" para a direita */
+}
+
+.pilares-lista strong {
+    color: #556b2f;
+}
+
+/* Tratamento da Imagem para que ela nunca quebre o layout */
+.image-card {
+    padding: 0; /* Remove o espaçamento interno para a foto ocupar o card todo */
+    overflow: hidden; /* Garante que a foto respeite as bordas arredondadas do card */
+}
+
+.image-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Centralização do bloco de links */
+.links-card {
+    text-align: center;
+}
+
+/* Transformando o link em um botão bonito e moderno */
+.btn-link {
+    display: inline-block;
+    background-color: #e0a996; /* Fundo coral */
+    color: #ffffff; /* Texto branco */
+    padding: 12px 30px;
+    margin-top: 15px;
+    border-radius: 30px; /* Botão totalmente arredondado */
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(224, 169, 150, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover do botão */
+.btn-link:hover {
+    background-color: #bd7e6a; /* Escurece levemente */
+    transform: translateY(-2px); /* Flutua um pouquinho para cima */
+    box-shadow: 0 6px 20px rgba(224, 169, 150, 0.5);
+}
+
+/* Rodapé */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #8c7b7a;
+    background-color: #f5eee6; /* Um tom ligeiramente mais escuro que o body para fechar a página */
+}
